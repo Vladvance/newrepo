@@ -19,7 +19,7 @@ F(3,:) = zeros(1:3)
 
 //Zadanie7
 G = 1:10  
-liczba_parzystych = length(find(modulo(G,2) == 0))
+sum(G(find(modulo(G,2) == 0)))
 //find(modulo(G,2) == 0) - zwraca indeksy tych elementow G, które spełniają
 //warunek w nawiasach
 
