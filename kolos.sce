@@ -1,4 +1,4 @@
-//Odpowiedzie na zadania z kolosa Scilab
+//Odpowiedzi na zadania z kolosa Scilab
 
 //Zadanie2  \uwaga - wektor kolumnowy(')
 A = [1:10]'.^2
