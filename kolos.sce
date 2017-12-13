@@ -15,7 +15,7 @@ E = D(:,[1 2 3 4 8])
 
 //Zadanie6
 F = [1 2 3;4 5 6]
-F(3,:) = zeros(1:3)
+F(3,:) = zeros()
 
 //Zadanie7
 G = 1:10  
