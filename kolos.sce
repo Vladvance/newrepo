@@ -26,7 +26,7 @@ sum(G(find(modulo(G,2) == 0)))
 //Zadanie8 Tu było tak, że podane są dwa obrazki wykresów, musicie napisać kod, który bym stworzył takie same wykresy
 x = -%pi:%pi/50:%pi
 subplot(211) //znaczy: pierwsze 2 cyfry - to jest "macierz wykresów", 3 cyfra - w którym okienku rysować kolejny wykres. 
-             //czyli "Narysuj (2) kolumny (1) wiersz okienek dla wykresów, rysuj następny w  (1) (pierwszym) okienku.
+             //czyli "Narysuj (2) wierszy (1) kołumnę okienek dla wykresów, rysuj następny w  (1) (pierwszym) okienku.
 plot(x, sin(x), "r--") //czerwona przerywana linia 
 //r	Red
 //g	Green
