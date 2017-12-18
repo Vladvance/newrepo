@@ -1,0 +1,121 @@
+\documentclass[11pt]{article} 
+\usepackage{amssymb,amsfonts,amsmath,amsthm} 
+\usepackage[polish]{babel} 
+\usepackage[cp1250]{inputenc} 
+\usepackage[T1]{fontenc}
+
+\begin{document}
+
+Hello World! To oczywimcie tylko zabawa.
+
+A to jest drugi akapit i można zobaczyć efekt działania.
+%using \\ for line breaks
+Hello World! To oczywiście\\ tylko zabawa.
+
+A to jest drugi akapit i można \linebreak zobaczyć efekt działania.
+
+A to jest kolejny akapit i można \newline zobaczyć efekt działania.
+
+%changing the font size
+Czasami zależy nam na zmianie stopnia pisma. Lubię {\large duże}, {\Large
+większe} oraz {\LARGE bardzo duże} litery.
+
+%changing the font style
+Odmiń pochyłe składa się terminy definiowane, objamniane lub tłumaczone. %Vlad: Tu ni mogę odtworzyć
+
+Grzegorz ugotował {\em knedle}, rodzaj {\bf pulpetów} z surowego \underline{mięsa}
+
+%justifications (omówiła srodowiska str 31) 
+Wyrównanie tekstu wymaga „pracy":
+\begin{center}środek \end{center}
+\begin{flushright}do prawa\end{flushright}
+
+To samo tylko jeszcze lewo:
+\begin{flushleft}do lewa \end{flushleft} 
+\begin{center}środek \end{center}
+\begin{flushright}do prawa\end{flushright}
+
+%quoting
+Cudzysłowy pojawią sie jeżeli je podwoimy ''BASIA'', pojedyńcze dają mmieszny efekt 'BARBARA', a takie "Basia" \ świadczą podobno o typograficznym... .
+
+Efekt specjalny, jeżeli chcemy coś wyróznić w środowisku, to wtedy środowisko
+ 
+\verb+ quote+
+\begin{quote}
+bardzo ładna poezja bardzo ładna poezja bardzo ładna poezja 
+bardzo ładna poezja bardzo ładna poezja bardzo ładna poezja 
+bardzo ładna poezja bardzo ładna poezja bardzo ładna poezja 
+bardzo ładna poezja bardzo ładna poezja \end{quote}
+
+Tutaj należy skończyć stronę (znależć jak).
+\newpage
+%other tricks (środowiska itemize, enumerate i description)
+
+\vspace*{-3cm}
+Teraz pobawimy sie listami;\\ środowiska \verb+ enumerate, itemize, description+,\\
+„spróbować" osiągnąć efekt jak poniżej:
+\begin{enumerate}\item Taka lista:
+\begin{itemize}
+\item wygląda
+\item[--] śmiesznie. \end{itemize}
+\item Pamiętaj:
+\begin{description}
+\item[Głupoty] nie stają się mądrościami, gdy sie je wyliczy. 
+\item[Mądrości] można elegancko zestawiać w wyliczeniach \end{description}
+\end{enumerate}
+%mmm. math mode.
+
+I wreszcie „matematyka", które należy po prostu napisać\\ 
+Równanie ($f(x)=2x$) można zapisać :
+\[ f(x)=2x \]
+\begin{equation}
+f(x)=2x
+\end{equation}
+
+%the big secret of LaTeX
+$$\Gamma(\gamma)\neq 1\rightarrow \exists \hbar \forall \heartsuit $$
+
+%subscripts, superscripts 
+$$z_{1} = x^{22} > 2^{2^2}$$
+%integrals, summations
+$$ \sum_{i=a}^b F(x) \Delta x \approx \int_a^b f(x) dx $$ 
+bardzo $ \sum_{i=a}^b F(x) \Delta x \approx \int_a^b f(x) dx $
+ładna poezja bardzo ładna poezja bardzo ładna poezja bardzo ładna poezja bardzo ładna poezja bardzo
+
+$$\frac{a+b}{c-d}$$ 
+$$\sqrt[3]{\frac{a+b}{c-d}$$
+$$f'(x)=2x \hspace{2em} \Rightarrow \hspace{2em} f(x)=x^2+C$$
+
+środowisko \verb+{array}+ do tworzenia tabel i macierzy:
+
+pierwsza
+$$
+\begin{array}{c1r}
+1 & 22 & 3 \\ 
+99 & 5 & x^2 
+\end{array}
+$$
+
+druga
+$$
+\begin{array}{c1r}
+\hline
+1 & 22 & 3 \\ 
+\hline
+99 & 5 & x^2 
+\end{array} $$
+
+trzecia
+$$
+\left[
+\left(
+\begin{array}{c1r}
+1 & 22 & 3 \\
+99 & 5 & x^2 
+\end{array} 
+\right)
++\frac{1}{2} 
+\right]
+$$
+ 
+\end{document}
