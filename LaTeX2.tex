@@ -1,0 +1,94 @@
+\documentclass[12pt]{article} 
+\usepackage{amsmath}
+\usepackage[polish]{babel}
+\usepackage[cp1250]{inputenc}
+\usepackage[OT4]{fontenc} 
+\usepackage{setspace}
+\title{Tytuł: Matematyka}
+\date{} %bez tej linijki, pod tytułem wypisze się dzisiejsza 
+%data; ewentualnie w nawiasy możemy wstawić jakąś konkretną datę,
+%a jeśli w nawiasach nic nie bedzie to data w ogóle sie nie wyświetli
+
+\begin{document}
+\maketitle %bez tego tytuł sie nie bedzie wyświetlał 
+\section*{Ściąga} %gwiazdka powoduje, ze tak sekcja nie ma numerka, i nie pojawia się w spisie treści
+int,lim,frac,sum,lnot,land,implies,Rightarrow,infty,iff,nearrow
+
+\section{Trygonometria (array)}
+%nie robic poniższej tabelki jako \begin {table} \begin{tabular} 
+%bo wtedy kazdy %wzorek z każdej komórki tabelki trzeba pisać w dolarach.
+%Jak sie skorzysta ze srodowiska {array} ujmując je cale w podwójne dolary albo %\[ i \] 
+%to od razu wszystko co będzie w tej tabeli będzie jako matematyka
+%jeżeli chcemy żeby tabelka miała więcej "światła" w pionie użyjmy pakietu
+%setspace.sty i środowiska \begin{spacing}{2} \end{spacing} \begin{spacing}{1,5}
+{\[ \begin{array}{|c|c|c|c|c|c||c|c|c|c|rr}
+  \hline	% robi poziome kreski w tabelach
+  x & 0 & \frac{\pi}{6} & \frac{\pi}{4} & \frac{\pi}{3} & \frac{\pi}{2} & (0;\frac{\pi}{2}) & (\frac{\pi}{2};\pi) & (\pi; \frac{3\pi}{2}) & (\frac{3\pi}{2};2\pi) \\
+  \hline
+  \sin x & O & \frac{1}{2} & \frac{\sqrt{2}}{2} & \frac{\sqrt{3}}{2} & 1 & + & + & - & - \\
+  \hline
+\end{array} \]}
+\end{spacing}
+\section{Szeregi (description)}
+  \begin{description}
+    \item[Szereg nieskończony:] $\displaystyle\sum_{n=1}^\infty a_{n} = (a_{n},S_{n})$ %bez \displaystyle symbol sumowanie bedzie tekstowo wypisany
+    \item[Szereg jest zbieżny:] $\displaystyle\sum_{n=1}^\infty a_{n} < \infty $
+    \item[Szereg jest rozbieżny do nieskończoności:] $\displaystyle\sum_{n=1}^\infty a_{n} = \infty $
+  \end{description}
+  \noindent Warunek konieczny zbieżności: $ \sum_{n=1}^\infty a_{n} < \infty \Rightarrow \lim_{n\rightarrow\infty} a_n = 0$ \\ %podwojny backslash lamie linie
+  (wniosek: $ \displaystyle \lim_{n\rightarrow\infty} a_n \neq O \Rightarrow \sum_{n=1}^\infty = \infty$) \\
+  $ \displaystyle\sum_{n=1}^\infty a_n < \infty $ jest bezwzględnie zbieżny,	$ \displaystyle\ sum_{n=1}^\infty 
+a_nl < \infty $, w przeciwnym wypadku jest warunkowo zbieżny.
+
+  \subsection{Szeregi o wyrazach dodatnich (equation,tag)} 
+    \subsubsection{Funkcja Riemanna: (cases,łext)}
+    
+    \begin{equation}
+    % srodowisko equation ponumeruje wzory (zeby wymusic konkretny numerek np. O wpisujemy \tag{0}
+    % jak nie chcemy mieć numerowania to wzór ujmujemy w podwójne dolary,
+    %jak chcemy mieć wzór bezpośrednio w tekście to w pojedyńcze dolary
+    \zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s} = \begin{cases} 
+      \infty & \text{dla s} \leq 1 \\ 
+      -\infty & \text{dla s} > 1
+    \end{cases}\tag{0}
+      %zeby ujmować coś w klamre jako kolejne opcje korzystamy ze środowiska {cases} 
+      %i poszczegolne elementy oddzielamy nową linią czyli podwójnym backslashem
+      %zeby jakiś fragment byl pisany jako tekst a nie jako wzor to trzeba go ujac w \tekst{...}
+    \end{equation}
+
+  \subsection{Szeregi o wyrazach dowolnych (align)}
+    \subsubsection{Kryterium Abela:}
+    \begin{align} % align chyba też robi wzóry z numerkami, wzóry powinny być wyrównane
+      \left(\lnot\left[\left(a_{n}\right)\nearrow\right]\land\forall n \in N : \left(a_{n} 0\right)\land \sum\limits_{n=i}^{\infty}
+      b_{n} < \infty \right)\Rightarrow\sum\limits_{n=1}^{\infty}\left(a_{n}b_{n}\right) < \infty
+    \end{align}
+    
+    \subsubsection{Kryterium Dirichleta:}
+
+    \begin{align}
+      \left(\lim\limits {n\rightarrow\infty}a_{n} = 0 \land \lnot \left[ \left(a_{n} \right) \nearrow \right] \land \exists \epsilon > O :
+      \forall n \in N : \epsilon - \left|S_{n}\right| O \right) \nonumber\\
+      \Rightarrow \sum\limits_{n=1}^\infty} \left(a_{n}b_{n} \right) < \infty
+    \end{align}
+
+    \subsubsection{Kryterium Leibniza:} 
+    
+    \begin{align}
+      \lim\limits_{n \rightarrow \infty} a_{n} = O \iff \sum\limits_{n=1}^{\infty} \left( \left(-1\right)^{n} a_{n}\right) < \infty
+    \end{align}
+
+\section{Całki (gather,int)}
+\begin{gather} %gather też robi wzóry z numerkami, ale wyśrodkowane;
+  \int\frac{f'(x)}{f(x)}dx = \ln\left|f(x)\right|	\\
+  \int xdx = x^{2} + C \\
+\int \cos xdx = \sin x + C
+\end{gather}
+
+\section{Kombinatoryka (align*, \{a $\backslash$choose b\})} 
+\begin{align*} % align* robi wzórki wyrównane ale bez numerowania
+{n \choose k} = \frac{n!}{(n-k)!k!}\\
+{n \choose n-k} - {n \choose k}
+\end{align*}
+
+\tableofcontents %polecenie robiące spis tresci, spis jest w osobnym pliku o rozszerzeniu .toc (table of contents)
+\end{document}
